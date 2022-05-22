@@ -8,7 +8,7 @@
 	height: 92px;
 	border: 1px solid #afb1b8;
 	border-radius: 4px;
-	@extend %centeredFlex;
+
 	@extend %link-decoration;
 	fill: var(--color-soc-icons);
 	transition: color var(--animation-timing-function);

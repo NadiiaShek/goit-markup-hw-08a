@@ -5,7 +5,7 @@
 
 
 .regular-clients__list {
-	@extend %centeredFlex; 
+
 	color: var(--color-soc-icons);
 	@extend %list;
 }

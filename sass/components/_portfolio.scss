@@ -1,12 +1,12 @@
 
 
 .filtr-portfolio {
-	padding-top: 94px;
-	padding-bottom: 94px;
+	// padding-top: 94px;
+	// padding-bottom: 94px;
 }
 
 .filtr-portfolio__list {
-	@extend %centeredFlex;
+	// @extend %centeredFlex;
 	margin-bottom: 50px;
 	@extend %list;
 }
@@ -17,17 +17,17 @@
 
 
 .portfolio-wrap__list {
-	display: flex;
-	flex-wrap: wrap;
+	// display: flex;
+	// flex-wrap: wrap;
 	margin-right: -30px;
 	margin-bottom: -30px;
 	@extend %list;
 }
 
 .portfolio-wrap__item {
-	flex-basis: calc((100% - 3 * 30px) / 3);
-	margin-right: 30px;
-	margin-bottom: 30px;
+	// flex-basis: calc((100% - 3 * 30px) / 3);
+	// margin-right: 30px;
+	// margin-bottom: 30px;
 	overflow: hidden;
 	&:hover, &:focus-within {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
