@@ -1,0 +1,27 @@
+
+.custom-checkbox {
+	position: relative;
+	@extend %centeredFlex;
+	width: 16px;
+	height: 15px;
+	border: solid 2px #212121;
+	border-radius: 3px;
+	margin-right: 7px;
+	
+}
+
+.checkbox-modale {
+	&:focus + .custom-checkbox {border: solid 2px var(--focus-hover-color);
+	cursor: var(--custom-pointer);}
+	&:checked + span .icon-checkbox {background-color: var(--focus-hover-color);
+	border: none;
+	fill: #ffffff;
+	border-radius: 3px;}
+	
+}
+
+.icon-checkbox {
+	position: absolute;
+	@extend %centeredFlex;
+	fill: transparent;
+}

@@ -1,0 +1,18 @@
+.comment-modale {
+	display: block;
+	width: 100%;
+	height: 120px;
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+	padding: 12px 16px;
+	resize: none;
+	font-size: 12px;
+	line-height: 1.16;
+	letter-spacing: 0.01em;
+	color: rgba(117, 117, 117, 0.5);
+	
+	&:focus, &:hover {border: 1px solid var(--focus-hover-color);
+	outline-color: var(--focus-hover-color);
+	transition: fill var(--animation-timing-function);
+	cursor: var(--custom-pointer);}
+}

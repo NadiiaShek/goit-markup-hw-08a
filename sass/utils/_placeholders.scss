@@ -1,0 +1,68 @@
+
+%list {
+	list-style: none;
+}
+
+%link-decoration {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+
+%centeredFlex {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%fieldWrap {
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+	transition: color var(--animation-timing-function);
+}
+
+%logoHeader {
+	font-family: "Raleway", sans-serif;
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 1.19;
+	letter-spacing: 0.03em;
+	color: #000000;
+}
+
+%logoFooter {
+	font-family: "Raleway", sans-serif;
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 1.19;
+	letter-spacing: 0.03em;
+	color: #ffffff;
+}
+
+
+%iconModale {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	left: 12px;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+}
+
+%focusHovericonMod {
+	fill: var(--focus-hover-color);
+	transition: fill var(--animation-timing-function);
+}
+
+@mixin font ($fw, $fs, $lh, $ls) {
+	font-weight: $fw;
+	font-size: $fs;
+	line-height: $lh;
+	letter-spacing: $ls;
+}
+
+

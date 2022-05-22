@@ -1,0 +1,19 @@
+.regular-clients__item  {
+	& + & {margin-left: 30px;}
+	
+}
+
+.regular-clients__link {
+	width: 170px;
+	height: 92px;
+	border: 1px solid #afb1b8;
+	border-radius: 4px;
+	@extend %centeredFlex;
+	@extend %link-decoration;
+	fill: var(--color-soc-icons);
+	transition: color var(--animation-timing-function);
+	
+	&:hover, &:focus {border: 1px solid var(--focus-hover-color);
+	fill: var(--focus-hover-color);
+	transition: color var(--animation-timing-function);}
+}

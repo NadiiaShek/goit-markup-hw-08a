@@ -1,0 +1,53 @@
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	padding: 0;
+	margin: 0 auto;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+	color: var(--body-text-color);
+	background-color: var(--body-background-color);
+	font-size: 14px;
+}
+
+button {
+	cursor: pointer;
+}
+
+.conteiner {
+	width: 1200px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
+}
+
+
+.visually-hidden {
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.is-hidden {
+	opacity: 0;
+	pointer-events: none;
+	visibility: hidden;
+}

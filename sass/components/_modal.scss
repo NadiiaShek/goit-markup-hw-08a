@@ -1,0 +1,108 @@
+.backdrop {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+	@extend %centeredFlex;
+	transition: opacity var(--animation-timing-function),
+		visibility var(--animation-timing-function);
+}
+
+.backdrop.is-hidden .modal {
+	transform: scale(0.25) rotate(-290deg);
+}
+
+.modal {
+	width: 528px;
+	height: 581px;
+	padding: 40px;
+	background: var(--body-background-color);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+		0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transition: transform var(--animation-timing-function);
+	transform: translate(-50%, -50%) scale(1) rotate(0);
+}
+
+
+.modal-title {
+	margin-bottom: 12px;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 1.15;
+	text-align: center;
+	letter-spacing: 0.03em;
+	color: var(--body-text-color);
+}
+
+.modale-input {
+	width: 100%;
+	height: 40px;
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+	outline: none;
+	padding-left: 42px;
+	transition: border-color var(--animation-timing-function);
+	&:hover, &:focus {border-color: var(--focus-hover-color);
+	cursor: var(--custom-pointer);
+	transition: border-color var(--animation-timing-function);
+	transition: fill var(--animation-timing-function);}
+	
+}
+
+
+.label-modale {
+	margin-bottom: 4px;
+	font-size: 12px;
+	line-height: 1.16px;
+	letter-spacing: 0.01em;
+	color: var(--main-text-color);
+}
+
+.field-name-wrap,
+.field-tel-wrap,
+.field-email-wrap {
+	@extend %fieldWrap;
+}
+
+.icon-person-modale, 
+.icon-telephone-modale, 
+.icon-envelope-modale {
+	@extend %iconModale;
+	.modale-input:focus + &, 
+	.modale-input:hover + & {@extend %focusHovericonMod};
+}
+
+.modal-comment {
+	margin-bottom: 20px;
+}
+
+
+.modal-policy {
+	@extend %centeredFlex;
+	margin-bottom: 30px;
+}
+
+
+.text-checkbox {
+	@extend %centeredFlex;
+	flex-wrap: nowrap;
+	@include font(normal, 14px, 1.71, 0.03em);
+	color: var(--main-text-color);
+	
+}
+
+.policy-link {
+	@extend %centeredFlex;
+	margin-left: 4px;
+	@include font(normal, 14px, 1.71, 0.03em);
+	text-decoration-line: underline;
+	color: var(--current-color);
+	.text-checkbox:hover + &, 	.text-checkbox:focus + & {outline-color: var(--focus-hover-color);
+	border: 1px solid var(--focus-hover-color);}
+}
+

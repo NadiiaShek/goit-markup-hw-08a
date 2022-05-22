@@ -1,0 +1,13 @@
+.regular-clients {
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
+
+
+.regular-clients__list {
+	@extend %centeredFlex; 
+	color: var(--color-soc-icons);
+	@extend %list;
+}
+
+

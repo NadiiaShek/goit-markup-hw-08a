@@ -1,0 +1,9 @@
+.footer-contacts__logo {
+	display: inline-block;
+	margin-bottom: 20px;
+	@extend %logoFooter;
+	@extend %link-decoration;
+}
+
+.part-logo {
+	color: var(--logo-part-color);}

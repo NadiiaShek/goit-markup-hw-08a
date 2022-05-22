@@ -1,0 +1,11 @@
+
+.navigation__logo {
+	@extend %centeredFlex;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	margin-right: 93px;
+	@extend %logoHeader;
+	@extend %link-decoration;
+}
+.part-logo {
+	color: var(--logo-part-color);}
