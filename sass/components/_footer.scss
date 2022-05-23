@@ -34,11 +34,7 @@
 
 
 
-.address-block {
-	// display: flex;
-	// align-items: baseline;
-	// justify-content: space-between;
-}
+
 
 .footer-contacts {
 	display: block;
@@ -55,12 +51,8 @@
 	margin-left: 10px;};
 }
 
-.subscription-footer {
-	// display: flex;
-	// flex-wrap: wrap;
-	// margin-left: auto;
-	// align-items: baseline;
-}
+.subscription-footer {}
+
 
 .social-footer__title {
 	width: 145px;
@@ -76,8 +68,7 @@
 }
 
 .social-footer__list {
-	// display: flex;
-	// justify-content: center;
+    display: flex;
 	@extend %list;
 	
 }
@@ -97,25 +88,21 @@
 
 
 .title-wrap {
-	// display: flex;
+	
 }
 
 .email-wrap {
 	position: relative;
-	// @extend %centeredFlex;
+
 	height: 50px;
-	// flex-wrap: nowrap;
-	// flex-direction: end;
+
 	
 }
 
 .subscription-footer {
 	width: 570px;
 	height: 86px;
-	// margin-left: 93px;
-// 	display: flex;
-// 	flex-wrap: wrap;
-// }
+
 }
 .subscription-footer__title {
 	display: flex;
@@ -127,7 +114,7 @@
 }
 
 .email-input-footer {
-	// display: flex;
+
 	width: 358px;
 	height: 50px;
 	margin-right: 12px;
@@ -168,7 +155,7 @@
 	top: 50%;
 	left: 95%;
 	transform: translateY(-50%) translateX(-95%);
-	// @extend %centeredFlex;
+
 	width: 24px;
 	height: 24px;
 	fill: #ffffff;}

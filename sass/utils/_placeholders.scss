@@ -1,3 +1,7 @@
+$mob: 480px;
+$tablet: 768px;
+$desk: 1200px;
+
 
 %list {
 	list-style: none;
@@ -57,6 +61,7 @@
 	fill: var(--focus-hover-color);
 	transition: fill var(--animation-timing-function);
 }
+
 
 @mixin font ($fw, $fs, $lh, $ls) {
 	font-weight: $fw;

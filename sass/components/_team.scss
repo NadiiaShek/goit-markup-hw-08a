@@ -6,11 +6,12 @@
 
 
 .team__list {
+
 	@extend %list;
 }
 
 .team-soc-list {
-	
+	display: flex;
 	@extend %list;
 }
 

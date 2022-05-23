@@ -30,7 +30,7 @@
   cursor: pointer;
 }
 
-.icon-checkbox, .custom-checkbox, .btn-send-modale, .close-modal, .close-btn, .policy-link, .text-checkbox, .modal-policy, .backdrop, .icon-send-footer, .email-wrap, .social-footer__link, .regular-clients__link, .regular-clients__list, .filtr-portfolio__list, .team-soc-link, .team-soc-list, .main-directions__label, .benifits-bg, .hero .button, .contacts-group__icon, .navigation__link, .navigation__logo {
+.icon-checkbox, .custom-checkbox, .btn-send-modale, .close-modal, .close-btn, .policy-link, .text-checkbox, .modal-policy, .backdrop, .social-footer__link, .team-soc-link, .hero .button, .navigation__logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,7 +109,7 @@ button {
 }
 
 .conteiner {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -148,11 +148,6 @@ img {
   color: var(--logo-part-color);
 }
 
-.contacts-group {
-  display: flex;
-  margin-left: auto;
-}
-
 .navigation__link {
   position: relative;
   padding-top: 32px;
@@ -168,14 +163,7 @@ img {
   margin-right: 50px;
 }
 
-.navigation__list {
-  display: flex;
-  margin-right: auto;
-}
-
 .navigation {
-  display: flex;
-  align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -187,25 +175,11 @@ header {
 }
 
 .contacts-group__list {
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: auto;
-  margin-right: 0;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--contact-list-color);
-}
-
-.contacts-group__item:not(:last-child) {
-  margin-right: 50px;
-  margin-left: auto;
-}
-
-.contacts-group__item {
-  display: inline-flex;
 }
 
 .contacts-group__icon {
@@ -291,22 +265,13 @@ header {
 }
 
 .benifits-bg {
-  width: 270px;
-  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 25px;
+  padding-top: 25px;
   margin-bottom: 30px;
   background-color: var(--our-team-background-color);
-}
-
-.our-benefits__list {
-  display: flex;
-}
-
-.our-benefits__item {
-  flex-basis: calc((100% - 90px) / 3);
-}
-
-.our-benefits__item:not(:last-child) {
-  margin-right: 30px;
 }
 
 .our-benefits__title {
@@ -318,12 +283,8 @@ header {
   text-transform: uppercase;
 }
 
-.our-benefits {
-  padding-top: 89px;
-  padding-bottom: 94px;
-}
-
 .our-benefits__text {
+  margin-bottom: 30px;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
@@ -333,19 +294,10 @@ header {
 
 .main-directions__item {
   position: relative;
-  flex-basis: calc((100% - 60px) / 3);
-}
-
-.main-directions__item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.main-directions__list {
-  display: flex;
+  margin-bottom: 30px;
 }
 
 .main-directions {
-  display: flex;
   padding-bottom: 94px;
 }
 
@@ -375,14 +327,11 @@ header {
 }
 
 .team {
-  padding-bottom: 94px;
-  padding-top: 94px;
   background-color: var(--our-team-background-color);
 }
 
-.team__list {
+.team-soc-list {
   display: flex;
-  margin-left: -30px;
 }
 
 .team__name {
@@ -396,8 +345,6 @@ header {
 }
 
 .team__item {
-  flex-basis: calc((100% - 90px) / 4);
-  margin-left: 30px;
   padding-bottom: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -436,11 +383,6 @@ header {
   transition: background-color var(--animation-timing-function);
 }
 
-.filtr-portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .filtr-portfolio__list {
   margin-bottom: 50px;
 }
@@ -450,15 +392,11 @@ header {
 }
 
 .portfolio-wrap__list {
-  display: flex;
-  flex-wrap: wrap;
   margin-right: -30px;
   margin-bottom: -30px;
 }
 
 .portfolio-wrap__item {
-  flex-basis: calc((100% - 90px) / 3);
-  margin-right: 30px;
   margin-bottom: 30px;
   overflow: hidden;
 }
@@ -498,6 +436,11 @@ header {
   text-decoration: none;
   color: inherit;
   transition: transform box-shadow var(--animation-timing-function);
+}
+.portfolio-wrap__link:hover, .portfolio-wrap__link:focus-within {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: box-shadow var(--animation-timing-function);
+  outline: 0;
 }
 
 .porfolio-border {
@@ -636,12 +579,6 @@ header {
   transition: color var(--animation-timing-function);
 }
 
-.address-block {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-}
-
 .footer-contacts {
   display: block;
 }
@@ -656,13 +593,6 @@ header {
 }
 .social-footer__item + .social-footer__item {
   margin-left: 10px;
-}
-
-.subscription-footer {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: auto;
-  align-items: baseline;
 }
 
 .social-footer__title {
@@ -682,7 +612,6 @@ header {
 
 .social-footer__list {
   display: flex;
-  justify-content: center;
 }
 
 .social-footer__link {
@@ -698,23 +627,14 @@ header {
   transition: background-color var(--animation-timing-function);
 }
 
-.title-wrap {
-  display: flex;
-}
-
 .email-wrap {
   position: relative;
   height: 50px;
-  flex-wrap: nowrap;
-  flex-direction: end;
 }
 
 .subscription-footer {
   width: 570px;
   height: 86px;
-  margin-left: 93px;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .subscription-footer__title {
@@ -730,7 +650,6 @@ header {
 }
 
 .email-input-footer {
-  display: flex;
   width: 358px;
   height: 50px;
   margin-right: 12px;
