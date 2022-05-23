@@ -1,0 +1,95 @@
+.benifits-bg {
+	display: flex;
+align-items: center;
+justify-content: center;
+padding-bottom: 25px;
+padding-top: 25px;
+	margin-bottom: 30px;
+	background-color: var(--our-team-background-color);
+@media screen and (min-width: 480px) {
+    width: 450px;
+	height: 120px;
+
+  }
+  	@media screen and (min-width: 768px) {
+    width: 354px;
+	height: 120px;
+	
+  }
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+	height: 120px;
+	
+  }
+
+}
+	
+	
+.our-benefits {
+@media screen and (min-width: 480px) {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+
+
+@media screen and (min-width: 768px) {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	
+}
+	 @media screen and (min-width: 1200px) {
+    padding-top: 89px;
+	padding-bottom: 94px;}
+	
+	 }
+	
+
+
+
+.our-benefits__list {
+	@extend %list;
+		@media screen and (min-width: 768px) {
+		display: flex;	
+		flex-wrap: wrap;
+		}
+		@media screen and (min-width: 1200px) {
+		display: flex;
+		flex-wrap: nowrap;
+			
+		}
+}
+
+.our-benefits__item {
+
+	@media screen and (min-width: 768px) {
+	flex-basis: calc((100% - 2 * 30px) / 2);
+	&:nth-child(odd) {
+	margin-right: 30px;
+	}}
+
+// не получается выстроить по 2 в ряд
+
+	@media screen and (min-width: 1200px) {
+	flex-basis: calc((100% - 3 * 30px) / 3);
+&:not(:last-child) {
+	margin-right: 30px;
+	}}
+	
+}
+
+
+.our-benefits__title {
+	margin-bottom: 10px;
+	@include font(700, 14px, 1.14, 0.03em);
+	text-transform: uppercase;
+
+}
+
+.our-benefits__text {
+	width: 100%;
+	margin-bottom: 30px;
+	@include font(normal, 14px, 1.71, 0.03em);
+	color: var(--main-text-color);
+
+}

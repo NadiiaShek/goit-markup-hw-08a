@@ -30,7 +30,7 @@
   cursor: pointer;
 }
 
-.icon-checkbox, .custom-checkbox, .btn-send-modale, .close-modal, .close-btn, .policy-link, .text-checkbox, .modal-policy, .backdrop, .social-footer__link, .team-soc-link, .hero .button, .navigation__logo {
+.icon-checkbox, .custom-checkbox, .btn-send-modale, .close-modal, .close-btn, .policy-link, .text-checkbox, .modal-policy, .backdrop, .social-footer__link, .team-soc-link, .main-directions__label, .hero .button, .navigation__logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,10 +109,24 @@ button {
 }
 
 .conteiner {
-  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+}
+@media screen and (min-width: 480px) {
+  .conteiner {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .conteiner {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .conteiner {
+    width: 1200px;
+  }
 }
 
 .visually-hidden {
@@ -273,6 +287,73 @@ header {
   margin-bottom: 30px;
   background-color: var(--our-team-background-color);
 }
+@media screen and (min-width: 480px) {
+  .benifits-bg {
+    width: 450px;
+    height: 120px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .benifits-bg {
+    width: 354px;
+    height: 120px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .benifits-bg {
+    width: 270px;
+    height: 120px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .our-benefits {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .our-benefits {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .our-benefits {
+    padding-top: 89px;
+    padding-bottom: 94px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .our-benefits__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .our-benefits__list {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .our-benefits__item {
+    flex-basis: calc((100% - 60px) / 2);
+  }
+  .our-benefits__item:nth-child(odd) {
+    margin-right: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .our-benefits__item {
+    flex-basis: calc((100% - 90px) / 3);
+  }
+  .our-benefits__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
 
 .our-benefits__title {
   margin-bottom: 10px;
@@ -284,6 +365,7 @@ header {
 }
 
 .our-benefits__text {
+  width: 100%;
   margin-bottom: 30px;
   font-weight: normal;
   font-size: 14px;
@@ -295,10 +377,32 @@ header {
 .main-directions__item {
   position: relative;
   margin-bottom: 30px;
+  flex-basis: calc((100% - 60px) / 3);
+}
+
+.main-directions__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.main-directions__list {
+  display: flex;
 }
 
 .main-directions {
+  display: flex;
   padding-bottom: 94px;
+}
+@media screen and (max-width: 1199px) {
+  .main-directions {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+  }
 }
 
 .main-directions__label {
@@ -318,6 +422,7 @@ header {
 }
 
 .team__title {
+  padding-top: 60px;
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
