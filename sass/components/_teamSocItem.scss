@@ -7,7 +7,9 @@
 	height: 44px;
 	background-color: var(--body-background-color);
 	border-radius: 50%;
-	@extend %centeredFlex;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	fill: var(--color-soc-icons);
 	transition: background-color var(--animation-timing-function);
 	&:hover, &:focus {background-color: var(--focus-hover-color);

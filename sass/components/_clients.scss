@@ -1,13 +1,37 @@
 .regular-clients {
+
 	padding-top: 94px;
 	padding-bottom: 94px;
+
 }
 
 
 .regular-clients__list {
-
+	display: flex;	
+		flex-wrap: wrap;
+	
 	color: var(--color-soc-icons);
 	@extend %list;
-}
+	
+	@media screen and (min-width: 480px),(max-width: 480px) {
+		margin: -15px;
+		flex-wrap: wrap;
+		
+	}
+    @media screen and (min-width: 768px) {
+		margin: -15px;
+		flex-wrap: wrap;
+		
+	}
+ @media screen and (min-width: 1200px) {
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: nowrap;
+  }
+  }
+	
+	
+
 
 

@@ -30,7 +30,7 @@
   cursor: pointer;
 }
 
-.icon-checkbox, .custom-checkbox, .btn-send-modale, .close-modal, .close-btn, .policy-link, .text-checkbox, .modal-policy, .backdrop, .social-footer__link, .team-soc-link, .main-directions__label, .hero .button, .navigation__logo {
+.icon-checkbox, .custom-checkbox, .btn-send-modale, .close-modal, .close-btn, .policy-link, .text-checkbox, .modal-policy, .backdrop, .social-footer__link, .main-directions__label, .hero .button, .navigation__logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -423,12 +423,38 @@ header {
 
 .team__title {
   padding-top: 60px;
-  margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
+  margin-bottom: 30px;
   text-align: center;
+}
+@media screen and (max-width: 480px), (min-width: 480px) {
+  .team__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    padding-top: 60px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 786px) {
+  .team__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    padding-top: 60px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    padding-top: 94px;
+    margin-bottom: 50px;
+  }
 }
 
 .team {
@@ -437,6 +463,8 @@ header {
 
 .team-soc-list {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .team__name {
@@ -478,6 +506,9 @@ header {
   height: 44px;
   background-color: var(--body-background-color);
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   fill: var(--color-soc-icons);
   transition: background-color var(--animation-timing-function);
 }
@@ -608,6 +639,36 @@ header {
   line-height: 1.16;
   letter-spacing: 0.03em;
 }
+@media screen and (max-width: 480px), (min-width: 480px) {
+  .regular-clients__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    padding-top: 60px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 786px) {
+  .regular-clients__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    padding-top: 60px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .regular-clients__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    padding-top: 94px;
+    margin-bottom: 50px;
+  }
+}
 
 .regular-clients {
   padding-top: 94px;
@@ -615,18 +676,62 @@ header {
 }
 
 .regular-clients__list {
+  display: flex;
+  flex-wrap: wrap;
   color: var(--color-soc-icons);
 }
+@media screen and (min-width: 480px), (max-width: 480px) {
+  .regular-clients__list {
+    margin: -15px;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 768px) {
+  .regular-clients__list {
+    margin: -15px;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .regular-clients__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+}
 
-.regular-clients__item + .regular-clients__item {
-  margin-left: 30px;
+@media screen and (min-width: 480px), (max-width: 480px) {
+  .regular-clients__item {
+    flex-basis: calc((100% - 60px) / 2);
+    display: flex;
+    margin: 15px;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 768px) {
+  .regular-clients__item {
+    flex-basis: calc((100% - 90px) / 3);
+    display: flex;
+    margin: 15px;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .regular-clients__item {
+    flex-wrap: nowrap;
+  }
+  .regular-clients__item + .regular-clients__item {
+    margin-left: 30px;
+  }
 }
 
 .regular-clients__link {
-  width: 170px;
-  height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   fill: var(--color-soc-icons);
   transition: color var(--animation-timing-function);
 }
@@ -634,6 +739,24 @@ header {
   border: 1px solid var(--focus-hover-color);
   fill: var(--focus-hover-color);
   transition: color var(--animation-timing-function);
+}
+@media screen and (min-width: 480px), (max-width: 480px) {
+  .regular-clients__link {
+    width: 210px;
+    height: 92px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .regular-clients__link {
+    width: 226px;
+    height: 92px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .regular-clients__link {
+    width: 170px;
+    height: 92px;
+  }
 }
 
 .footer-contacts__logo {
