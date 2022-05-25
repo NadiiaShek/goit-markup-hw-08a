@@ -109,23 +109,24 @@ button {
 }
 
 .conteiner {
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
 }
 @media screen and (min-width: 480px) {
   .conteiner {
-    width: 480px;
+    max-width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
   .conteiner {
-    width: 768px;
+    max-width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
   .conteiner {
-    width: 1200px;
+    max-width: 1200px;
   }
 }
 
@@ -338,9 +339,13 @@ header {
   }
 }
 
+.our-benefits__item {
+  justify-content: center;
+}
 @media screen and (min-width: 768px) {
   .our-benefits__item {
     flex-basis: calc((100% - 60px) / 2);
+    flex-wrap: wrap;
   }
   .our-benefits__item:nth-child(odd) {
     margin-right: 30px;
@@ -458,13 +463,28 @@ header {
 }
 
 .team {
+  padding-bottom: 60px;
   background-color: var(--our-team-background-color);
+}
+
+@media screen and (min-width: 768px) {
+  .team__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__list {
+    display: flex;
+    flex-wrap: nowrap;
+  }
 }
 
 .team-soc-list {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 24px;
 }
 
 .team__name {
@@ -478,10 +498,27 @@ header {
 }
 
 .team__item {
-  padding-bottom: 30px;
+  margin-bottom: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--body-background-color);
+}
+@media screen and (min-width: 768px) {
+  .team__item {
+    flex-basis: calc((100% - 60px) / 2);
+    flex-wrap: wrap;
+  }
+  .team__item:nth-child(odd) {
+    margin-right: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__item {
+    flex-basis: calc((100% - 90px) / 3);
+  }
+  .team__item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .team__img {
@@ -632,7 +669,6 @@ header {
 }
 
 .regular-clients__title {
-  margin-bottom: 50px;
   text-align: center;
   font-weight: 700;
   font-size: 36px;
@@ -645,7 +681,6 @@ header {
     font-size: 28px;
     line-height: 1.17;
     letter-spacing: 0.03em;
-    padding-top: 60px;
     margin-bottom: 30px;
   }
 }
@@ -655,7 +690,6 @@ header {
     font-size: 28px;
     line-height: 1.17;
     letter-spacing: 0.03em;
-    padding-top: 60px;
     margin-bottom: 30px;
   }
 }
@@ -665,14 +699,27 @@ header {
     font-size: 36px;
     line-height: 1.16;
     letter-spacing: 0.03em;
-    padding-top: 94px;
     margin-bottom: 50px;
   }
 }
 
-.regular-clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
+@media screen and (min-width: 480px) {
+  .regular-clients {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .regular-clients {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .regular-clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .regular-clients__list {

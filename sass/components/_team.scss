@@ -1,20 +1,31 @@
 .team {
-
+padding-bottom: 60px;
 	background-color: var(--our-team-background-color);
 }
 
 
 
 .team__list {
+@extend %list;
+@media screen and (min-width: 768px) {
+		display: flex;	
+		flex-wrap: wrap;
+		}
 
-	@extend %list;
-}
+		@media screen and (min-width: 1200px) {
+		display: flex;
+		flex-wrap: nowrap;
+			
+		}
+  }
+
 
 .team-soc-list {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	@extend %list;
+	padding-bottom: 24px;
 }
 
 

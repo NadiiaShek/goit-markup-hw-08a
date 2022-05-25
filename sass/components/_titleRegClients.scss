@@ -1,21 +1,19 @@
 .regular-clients__title {
-	margin-bottom: 50px;
 	text-align: center;
 	 @include font(700, 36px, 1.16, 0.03em);
 
 @media screen and (max-width: 480px), (min-width: 480px) {
      @include font(700, 28px, 1.17, 0.03em);
-	 padding-top: 60px;
+	 
 	 margin-bottom: 30px;
   }
 @media screen and (min-width: 786px) {
      @include font(700, 28px, 1.17, 0.03em);
-	 padding-top: 60px;
+	 
 	margin-bottom: 30px;
   }
   @media screen and (min-width: 1200px) {
      @include font(700, 36px, 1.16, 0.03em);
-	 padding-top: 94px;
 	margin-bottom: 50px;
   }
 }
