@@ -9,19 +9,28 @@
 }
 
 .address {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+
 
 	@include mob { 
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-}
+	}
  
+	@include tab { 
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	}
+	@include desk { 
+	display: flex;
+	
+	
+	}
 }
 
 .footer-address {
+	margin-left: 0;
 	margin-bottom: 9px;
 	font-style: normal;
 	@include font(normal, 14px, 1.71, 0.03em);
@@ -34,7 +43,19 @@
 	@include font(normal, 14px, 1.71, 0.03em);
 	color: rgba(255, 255, 255, 0.6);
 	@extend %list;
+@include mob {
+	margin-left: auto;
 }
+@include tab {
+	margin-left: auto;
+}
+@include desk {
+	margin-left: 0;
+}
+	
+}
+
+
 .footer-contact__item:not(:last-child) {
 	margin-bottom: 9px;
 }
@@ -47,29 +68,28 @@
 }
 
 .address-block {
+	@include tab {
+	display: flex;
+	align-items: baseline;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	}
 
-@include desk { 
+	@include desk {
+	
 	display: flex;
 	align-items: baseline;
 	justify-content: space-between;
-}
-}
-
-.tablet-wrap {
-
-@include tab { 
-	display: flex;
 	flex-wrap: nowrap;
-	margin-bottom: 60px;
+	}
+}
 
-}
-}
+
 
 .footer-contacts {
-	margin: auto;
-	text-align: center;
-	margin-bottom: 60px;
-	display: block;
+	// margin: auto;
+	// margin-bottom: 60px;
+	// display: block;
 
 @include mob { 
 	margin: auto;
@@ -78,16 +98,20 @@
  }
 
 @include tab {
-	margin-bottom: 0;
+	margin-bottom: 60;
 	margin-left: 76px;
+	text-align: center;
+	
 
 }
  @include desk {
-	 
+	 width: 231px;
+	 display: block;
 	 margin: auto;
+	 text-align: start;
+	
  }
 
- 
 
 }
 
@@ -128,20 +152,6 @@
 }
 }
 
-.subscription-footer {
-display: flex;
-	flex-wrap: wrap;
-	margin-left: auto;
-	align-items: baseline;
-
-
-	@include desk { 
-	display: flex;
-	flex-wrap: wrap;
-	margin-left: auto;
-	align-items: baseline;
-}
-}
 
 .social-footer__title {
 	text-align: center;
@@ -158,7 +168,7 @@ display: flex;
 	}
 
 	@include desk {
-		width: 145px;
+	width: 145px;
 	height: 16px;
 	margin-left: 0;
 	margin-right: 0;
@@ -190,21 +200,24 @@ display: flex;
 
 
 .title-wrap {
-
 @include desk {
     display: flex;
+	margin-bottom: 20px;
   }
 	
 }
 
 .email-wrap {
+
+@include mob {
 	position: relative;
-    display: flex;
+	display: flex;
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
-
-@include mob {
+}
+@include tab {
+	position: relative;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -212,25 +225,31 @@ display: flex;
 }
 
 @include desk {
-   display: flex;
-   align-items: center;
-   justify-content: center;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
 	height: 50px;
 	flex-wrap: nowrap;
 	flex-direction: end;
-
-  }	
-	
-	
+  }		
 }
 
-.subscription-footer {
+.subscription-footer { 
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 
 @include mob {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+	
+@include tab {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -240,27 +259,40 @@ display: flex;
 @include desk {
 	width: 570px;
 	height: 86px;
-   margin-left: 93px;
+   flex-direction: row;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: start;
+	align-items: baseline;
   }
 	
 
 }
+
 .subscription-footer__title {
-	
-	margin-left: 0;
-	margin-bottom: 20px;
-	@include font(700, 14px, 1.14, 0.03em);
+@include font(700, 14px, 1.14, 0.03em);
 	text-transform: uppercase;
 	color: var(--second-text-color);
+	margin-left: 0;
+	
+	@include mob {
+margin-bottom: 20px;	
+	}
+	
+	@include tab {
+margin-bottom: 20px;
+	}
+
+	@include desk {
+margin-bottom: 0px;
+	}
 }
 
 .email-input-footer {
 	
 	height: 50px;
 	background-color: inherit;
-	margin-bottom: 20px;
+
 	padding-left: 16px;
 	@include font(400, 16px, 1.25, 0.03em);
 	align-items: center;
@@ -292,6 +324,7 @@ display: flex;
 	width: 358px;
 	height: 50px;
 	margin-right: 12px;
+	margin-bottom: 0px;
 	padding-left: 16px;
 	@include font(400, 16px, 1.25, 0.03em);
 	align-items: center;
