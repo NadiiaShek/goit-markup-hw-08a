@@ -1,5 +1,10 @@
 .regular-clients__item  {
-@media screen and (min-width: 480px), (max-width: 480px) {
+@media screen and (max-width: 480px) {
+	margin-bottom: 30px;
+}
+ 
+
+@include mob {
     flex-basis: calc((100% - 4 * 15px)/2);
 	display: flex;
 	margin: 15px;

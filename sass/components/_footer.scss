@@ -9,7 +9,9 @@
 }
 
 .address {
-
+display: flex;
+	flex-direction: column;
+	justify-content: center;
 
 	@include mob { 
 	display: flex;
@@ -30,15 +32,19 @@
 }
 
 .footer-address {
-	margin-left: 0;
+	margin-left: auto;
 	margin-bottom: 9px;
 	font-style: normal;
 	@include font(normal, 14px, 1.71, 0.03em);
 	color: var(--second-text-color);
 
+	@include desk {
+		margin-left: 0;
+	}
 }
 
 .footer-contacts__list {
+	margin-left: auto;
 	font-style: normal;
 	@include font(normal, 14px, 1.71, 0.03em);
 	color: rgba(255, 255, 255, 0.6);
@@ -68,6 +74,8 @@
 }
 
 .address-block {
+
+
 	@include tab {
 	display: flex;
 	align-items: baseline;
@@ -87,9 +95,9 @@
 
 
 .footer-contacts {
-	// margin: auto;
-	// margin-bottom: 60px;
-	// display: block;
+margin: auto;
+	text-align: center;
+	margin-bottom: 60px;
 
 @include mob { 
 	margin: auto;
@@ -155,7 +163,7 @@
 
 .social-footer__title {
 	text-align: center;
-		margin-bottom: 20px;
+	margin-bottom: 20px;
 
 	@include font(700, 14px, 1.14, 0.03em);
 	font-style: normal;
@@ -208,7 +216,11 @@
 }
 
 .email-wrap {
-
+    position: relative;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;    
 @include mob {
 	position: relative;
 	display: flex;
@@ -270,6 +282,7 @@
 }
 
 .subscription-footer__title {
+	margin-bottom: 20px;	
 @include font(700, 14px, 1.14, 0.03em);
 	text-transform: uppercase;
 	color: var(--second-text-color);
@@ -289,8 +302,9 @@ margin-bottom: 0px;
 }
 
 .email-input-footer {
-	
+	width: 150%;
 	height: 50px;
+	margin-bottom: 20px;
 	background-color: inherit;
 
 	padding-left: 16px;

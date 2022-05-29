@@ -1263,18 +1263,22 @@ header {
 
 .regular-clients__list {
   display: flex;
+  flex-direction: column;
+  align-content: center;
   color: var(--color-soc-icons);
   margin: -15px;
   flex-wrap: wrap;
 }
 @media screen and (min-width: 480px) {
   .regular-clients__list {
+    flex-direction: row;
     margin: -15px;
     flex-wrap: wrap;
   }
 }
 @media screen and (min-width: 786px) {
   .regular-clients__list {
+    flex-direction: row;
     margin: -15px;
     display: flex;
     flex-wrap: wrap;
@@ -1283,13 +1287,19 @@ header {
 @media screen and (min-width: 1200px) {
   .regular-clients__list {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
   }
 }
 
-@media screen and (min-width: 480px), (max-width: 480px) {
+@media screen and (max-width: 480px) {
+  .regular-clients__item {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 480px) {
   .regular-clients__item {
     flex-basis: calc((100% - 60px) / 2);
     display: flex;
@@ -1365,6 +1375,11 @@ header {
   background-color: var(--second-background);
 }
 
+.address {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 @media screen and (min-width: 480px) {
   .address {
     display: flex;
@@ -1386,7 +1401,7 @@ header {
 }
 
 .footer-address {
-  margin-left: 0;
+  margin-left: auto;
   margin-bottom: 9px;
   font-style: normal;
   font-weight: normal;
@@ -1395,8 +1410,14 @@ header {
   letter-spacing: 0.03em;
   color: var(--second-text-color);
 }
+@media screen and (min-width: 1200px) {
+  .footer-address {
+    margin-left: 0;
+  }
+}
 
 .footer-contacts__list {
+  margin-left: auto;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -1449,6 +1470,11 @@ header {
   }
 }
 
+.footer-contacts {
+  margin: auto;
+  text-align: center;
+  margin-bottom: 60px;
+}
 @media screen and (min-width: 480px) {
   .footer-contacts {
     margin: auto;
@@ -1567,6 +1593,13 @@ header {
   }
 }
 
+.email-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
 @media screen and (min-width: 480px) {
   .email-wrap {
     position: relative;
@@ -1633,6 +1666,7 @@ header {
 }
 
 .subscription-footer__title {
+  margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -1658,7 +1692,9 @@ header {
 }
 
 .email-input-footer {
+  width: 150%;
   height: 50px;
+  margin-bottom: 20px;
   background-color: inherit;
   padding-left: 16px;
   font-weight: 400;

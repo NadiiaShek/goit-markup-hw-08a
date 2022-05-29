@@ -20,19 +20,24 @@
 
 
 .regular-clients__list {
+	
 	display: flex;
+	flex-direction: column;
+	align-content: center;
 	color: var(--color-soc-icons);
 	@extend %list;
 	margin: -15px;
 	flex-wrap: wrap;
 	
 	@include mob {
+		flex-direction: row;
 		margin: -15px;
 		flex-wrap: wrap;
 		
 	}
 
      @include tab {
+		 flex-direction: row;
 		margin: -15px;
 		display: flex;
 		flex-wrap: wrap;
@@ -40,6 +45,7 @@
 	
    @include desk {
     display: flex;
+	flex-direction: row;
 	align-items: center;
 	justify-content: center;
 	flex-wrap: nowrap;
