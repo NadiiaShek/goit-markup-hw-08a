@@ -302,6 +302,9 @@ header {
   border: none;
   background-color: transparent;
 }
+.menu-open-btn:hover, .menu-open-btn:focus {
+  fill: var(--focus-hover-color);
+}
 
 .mob-menu {
   position: fixed;
@@ -310,18 +313,30 @@ header {
   left: 0;
   background-color: var(--body-background-color);
   width: 100vw;
-  padding-top: 48px;
+  height: 100vh;
+  padding-top: 10px;
   padding-bottom: 48px;
+  overflow-y: auto;
+}
+
+.mob-menu .conteiner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
 }
 
 .menu-close-btn {
   display: block;
   margin-left: auto;
+  border: none;
+  background-color: transparent;
   margin-bottom: 8px;
+  margin-right: 15px;
 }
-
-.mob-menu__list {
-  margin-bottom: 302px;
+.menu-close-btn:hover, .menu-close-btn:focus {
+  fill: var(--focus-hover-color);
 }
 
 .mob-menu__item {
@@ -335,7 +350,11 @@ header {
   margin-bottom: 30px;
 }
 
-.mob-menu-contacts {
+.mob-menu__link:hover, .mob-menu__link:focus {
+  color: var(--focus-hover-color);
+}
+
+.mob-menu-contacts__list {
   margin-bottom: 64px;
 }
 
@@ -348,6 +367,14 @@ header {
 }
 .mob-menu-contacts__item:not(:last-child) {
   margin-bottom: 32px;
+}
+
+.mob-menu-contacts__link:hover, .mob-menu-contacts__link:focus {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--focus-hover-color);
 }
 
 .soc-wrap {
@@ -378,6 +405,10 @@ header {
   border: 1px solid rgba(33, 33, 33, 0.2);
   transform: rotate(90deg);
   bottom: 50%;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .current {
