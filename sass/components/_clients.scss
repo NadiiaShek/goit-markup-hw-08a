@@ -23,10 +23,11 @@
 	display: flex;
 	color: var(--color-soc-icons);
 	@extend %list;
+	margin: -15px;
+	flex-wrap: wrap;
 	
-	@media screen and (min-width: 480px),(max-width: 480px) {
+	@include mob {
 		margin: -15px;
-		
 		flex-wrap: wrap;
 		
 	}

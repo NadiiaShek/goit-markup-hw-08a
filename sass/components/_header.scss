@@ -1,4 +1,8 @@
 .contacts-group {
+	@include tab {
+		display: flex;
+
+	}
 	@include desk {
 	display: flex;
 	margin-left: auto;
@@ -8,18 +12,80 @@
 
 
 .navigation__link {
+	@extend %link-decoration;
 	position: relative;
-	@extend %centeredFlex;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: color var(--animation-timing-function);
+	&:hover, &:focus {color: var(--focus-hover-color);
+	transition: color var(--animation-timing-function);}
+
+	
+	@include tab {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	padding-top: 32px;
 	padding-bottom: 32px;
 	transition: color var(--animation-timing-function);
 	@extend %link-decoration;
 	&:hover, &:focus {color: var(--focus-hover-color);
-	transition: color var(--animation-timing-function);}
+	transition: color var(--animation-timing-function);}	
+	}
+@include desk { 
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 32px;
+	padding-bottom: 32px;
+	transition: color var(--animation-timing-function);
 	
+	&:hover, &:focus {color: var(--focus-hover-color);
+	transition: color var(--animation-timing-function);}
+}
 }
 
+.contacts-group__link {
+	@extend %link-decoration;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: color var(--animation-timing-function);
+	&:hover, &:focus {color: var(--focus-hover-color);
+	transition: color var(--animation-timing-function);}
+
+	@include tab {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: color var(--animation-timing-function);
+	@extend %link-decoration;
+	&:hover, &:focus {color: var(--focus-hover-color);
+	transition: color var(--animation-timing-function);}	
+	}
+
+	@include desk { 
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 32px;
+	padding-bottom: 32px;
+	transition: color var(--animation-timing-function);
+	
+	&:hover, &:focus {color: var(--focus-hover-color);
+	transition: color var(--animation-timing-function);}
+}
+}
 .navigation__item:not(:last-child) {
+	@include tab {
+		margin-right: 50px;
+	}
 	@include desk {
 		margin-right: 50px;
 	}
@@ -27,19 +93,19 @@
 
 .navigation__list {
 	@extend %list;
+@include tab {
+	display: flex;
+	margin-right: 69px;
+	}
 
 @include desk {
-		display: flex;
+	display: flex;
 	margin-right: auto;
 	}
 }
 
 .navigation {
-	
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 1.14;
-	letter-spacing: 0.02em;
+	@include font(500, 14px, 1.14, 0.02em);
 
 @include mob {
 	display: none;
@@ -48,6 +114,7 @@
 @include tab {
     display: flex;
 	align-items: center;
+	
 	}
 
 @include desk {
@@ -64,11 +131,7 @@ header {
 
 
 .contacts-group__list {
-	
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 1.14;
-	letter-spacing: 0.02em;
+	@include font(500, 14px, 1.14, 0.02em);
 	color: var(--contact-list-color);
 	@extend %list;
 
@@ -80,6 +143,8 @@ header {
 	display: inline-flex;
 	justify-content: space-between;
 	align-items: center;
+	align-content: center;
+	flex-wrap: wrap;
 	margin-left: auto;
 	margin-right: 0;
 
@@ -94,7 +159,12 @@ header {
 	}
 }
 
+
 .contacts-group__item:not(:last-child) {
+
+	@include tab {
+		margin-bottom: 10px;
+	}
 	@include desk {
 	margin-right: 50px;
 	margin-left: auto;

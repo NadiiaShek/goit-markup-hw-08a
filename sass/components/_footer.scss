@@ -5,14 +5,28 @@
 	margin-left: 0px;
 
 	background-color: var(--second-background);
+
 }
 
+.address {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	@include mob { 
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+ 
+}
 
 .footer-address {
 	margin-bottom: 9px;
 	font-style: normal;
 	@include font(normal, 14px, 1.71, 0.03em);
 	color: var(--second-text-color);
+
 }
 
 .footer-contacts__list {
@@ -33,21 +47,76 @@
 }
 
 .address-block {
-	// display: flex;
-	// align-items: baseline;
-	// justify-content: space-between;
+
+@include desk { 
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+}
+}
+
+.tablet-wrap {
+
+@include tab { 
+	display: flex;
+	flex-wrap: nowrap;
+	margin-bottom: 60px;
+
+}
 }
 
 .footer-contacts {
-	display: block;
-@media screen and (min-width: 480px) {
 	margin: auto;
+	text-align: center;
+	margin-bottom: 60px;
+	display: block;
+
+@include mob { 
+	margin: auto;
+	text-align: center;
+	margin-bottom: 60px;
  }
 
+@include tab {
+	margin-bottom: 0;
+	margin-left: 76px;
+
+}
+ @include desk {
+	 
+	 margin: auto;
+ }
+
+ 
 
 }
 
 .social-footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 80px;
+	margin-bottom: 60px;
+	&__item + &__item {
+	margin-left: 10px;};
+
+@include mob { 
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 80px;
+	margin-bottom: 60px;
+	
+}
+@include tab {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	justify-content: space-between;
+	height: 80px;
+	margin-right: 89px;
+}
+@include desk { 
 	display: flex;
 	flex-wrap: wrap;
 	align-items: baseline;
@@ -57,26 +126,44 @@
 	&__item + &__item {
 	margin-left: 10px;};
 }
+}
 
 .subscription-footer {
+display: flex;
+	flex-wrap: wrap;
+	margin-left: auto;
+	align-items: baseline;
+
+
+	@include desk { 
 	display: flex;
 	flex-wrap: wrap;
 	margin-left: auto;
 	align-items: baseline;
 }
-
+}
 
 .social-footer__title {
-	width: 145px;
-	height: 16px;
-	margin-left: 0;
-	margin-right: 0;
-	margin-bottom: 20px;
+	text-align: center;
+		margin-bottom: 20px;
 
 	@include font(700, 14px, 1.14, 0.03em);
 	font-style: normal;
 	text-transform: uppercase;
 	color: var(--second-text-color);
+
+	@include mob {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	@include desk {
+		width: 145px;
+	height: 16px;
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 20px;
+	}
 }
 
 .social-footer__list {
@@ -85,6 +172,8 @@
 	@extend %list;
 	
 }
+
+
 
 .social-footer__link {
 	width: 44px;
@@ -110,6 +199,17 @@
 
 .email-wrap {
 	position: relative;
+    display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+
+@include mob {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
 
 @include desk {
    display: flex;
@@ -125,9 +225,21 @@
 }
 
 .subscription-footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+@include mob {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+	
+@include desk {
 	width: 570px;
 	height: 86px;
-@include desk {
    margin-left: 93px;
 	display: flex;
 	flex-wrap: wrap;
@@ -136,7 +248,7 @@
 
 }
 .subscription-footer__title {
-	display: flex;
+	
 	margin-left: 0;
 	margin-bottom: 20px;
 	@include font(700, 14px, 1.14, 0.03em);
@@ -145,24 +257,51 @@
 }
 
 .email-input-footer {
+	
+	height: 50px;
+	background-color: inherit;
+	margin-bottom: 20px;
+	padding-left: 16px;
+	@include font(400, 16px, 1.25, 0.03em);
+	align-items: center;
+	color: rgba(255, 255, 255, 0.6);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+	border-radius: 4px;
 
+@include mob {
+	width: 450px;
+	height: 50px;
+	margin-bottom: 20px;
+	padding-left: 16px;
+	@include font(400, 16px, 1.25, 0.03em);
+	align-items: center;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+@include tab {
+	width: 450px;
+	height: 50px;
+	margin-bottom: 20px;
+	@include font(400, 16px, 1.25, 0.03em);
+	align-items: center;
+	color: rgba(255, 255, 255, 0.6);
+} 
+
+@include desk { 
 	width: 358px;
 	height: 50px;
 	margin-right: 12px;
 	padding-left: 16px;
-	font-size: 16px;
-	line-height: 1.25;
+	@include font(400, 16px, 1.25, 0.03em);
 	align-items: center;
-	letter-spacing: 0.03em;
 	color: rgba(255, 255, 255, 0.6);
-
-	background-color: inherit;
-	border: 1px solid rgba(255, 255, 255, 0.3);
-	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-	border-radius: 4px;
+}
+	
 }
 
 .btn-subc-footer {
+	position: relative;
 	display: flex;
 	align-items: center;
 	width: 200px;
@@ -184,8 +323,8 @@
 .icon-send-footer {
 	position: absolute;
 	top: 50%;
-	left: 95%;
-	transform: translateY(-50%) translateX(-95%);
+	left: 85%;
+	transform: translateY(-50%) translateX(-85%);
 
 	width: 24px;
 	height: 24px;
