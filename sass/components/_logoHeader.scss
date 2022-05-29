@@ -1,11 +1,23 @@
 
 .navigation__logo {
-	@extend %centeredFlex;
+	@extend %logoHeader;
+	@extend %link-decoration;
+	display: flex;
+	align-items: center;
+
+@include mob {
+	padding-top: 16px;
+	padding-bottom: 16px;
+	margin-right: 0;
+}
+@include desk {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	padding-top: 24px;
 	padding-bottom: 24px;
 	margin-right: 93px;
-	@extend %logoHeader;
-	@extend %link-decoration;
+	}
 }
 .part-logo {
 	color: var(--logo-part-color);}

@@ -1,14 +1,15 @@
 .regular-clients {
-@media screen and (min-width: 480px) {
+	  padding-top: 60px;
+	padding-bottom: 60px;
+@include mob {
     padding-top: 60px;
 	padding-bottom: 60px;
   }
-
-@media screen and (min-width: 768px) {
+@include tab {
    padding-top: 60px;
 	padding-bottom: 60px;
   }
- @media screen and (min-width: 1200px) {
+@include desk {
    padding-top: 94px;
 	padding-bottom: 94px;
 
@@ -19,23 +20,24 @@
 
 
 .regular-clients__list {
-	display: flex;	
-		flex-wrap: wrap;
-	
+	display: flex;
 	color: var(--color-soc-icons);
 	@extend %list;
 	
 	@media screen and (min-width: 480px),(max-width: 480px) {
 		margin: -15px;
+		
 		flex-wrap: wrap;
 		
 	}
-    @media screen and (min-width: 768px) {
+
+     @include tab {
 		margin: -15px;
+		display: flex;
 		flex-wrap: wrap;
-		
 	}
- @media screen and (min-width: 1200px) {
+	
+   @include desk {
     display: flex;
 	align-items: center;
 	justify-content: center;

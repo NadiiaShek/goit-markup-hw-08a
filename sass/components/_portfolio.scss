@@ -1,13 +1,49 @@
 
 
 .filtr-portfolio {
+	 padding-top: 60px;
+	padding-bottom: 60px;
+	@include mob {
+    padding-top: 60px;
+	padding-bottom: 60px;
+
+  }
+  @include tab {
+    padding-top: 60px;
+	padding-bottom: 60px;
+  }
+  @include desk {
+    padding-top: 94px;
+	padding-bottom: 94px;
+  }
 
 }
 
 .filtr-portfolio__list {
+	 display: flex;	
+	flex-wrap: wrap;
+	margin-bottom: 40px;
 
-	margin-bottom: 50px;
 	@extend %list;
+@include mob {
+    display: flex;	
+	flex-wrap: wrap;
+	margin-bottom: 40px;
+}
+
+@include tab {
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@include desk {
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
 }
 
 .btn-portfolio__item:not(:last-child) {
@@ -15,27 +51,73 @@
 }
 
 
-.portfolio-wrap__list {
+.btn-portfolio__item {
+	margin-bottom: 15px;
+	@include mob {
+   	margin-bottom: 15px;}
+  }
 
-	margin-right: -30px;
+
+
+.portfolio-wrap__list {
+@extend %list;
+
+@include mob {
+	display: block;
+}
+
+@include tab {
+	display: flex;
+	flex-wrap: wrap;
+	 margin-right: -30px;
 	margin-bottom: -30px;
-	@extend %list;
+}
+
+@include desk {
+	display: flex;
+	flex-wrap: wrap;
+    margin-right: -30px;
+	margin-bottom: -30px;
+  }
+	
+	
 }
 
 .portfolio-wrap__item {
-
 	margin-bottom: 30px;
+	display: block;
 	overflow: hidden;
 	&:hover, &:focus-within {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
 		1px 4px 6px rgba(0, 0, 0, 0.16);
 	transition: box-shadow var(--animation-timing-function);
     outline: 0;}
+
+@include mob {
+	display: block;
+}
+
+@include tab {
+		flex-basis: calc((100% - 2 * 30px) / 2);
+	&:nth-child(odd) {
+		margin-right: 30px;	
+	}
+	margin-bottom: 30px;
+	flex-wrap: wrap;
+	}
+
+@include desk {
+    flex-basis: calc((100% - 3 * 30px) / 3);
+	margin-right: 30px;
+	margin-bottom: 30px;
+  }
+
 	}
 
 
 
 .item-portfolio-wrap {
+	display: flex;
 	position: relative;
 	transition: transform var(--animation-timing-function);
 	overflow: hidden;
@@ -45,11 +127,8 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	padding: 63px 24px;
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 1.55;
-	letter-spacing: 0.03em;
+	padding: 90px 24px;
+	 @include font(400, 18px, 1.55, 0.03em);
 	color: var(--second-text-color);
 	background-color: rgba(33, 150, 243, 0.9);
 	transform: translateY(101%);
@@ -58,6 +137,17 @@
 		.portfolio-wrap__link:hover &,
 		.portfolio-wrap__link:focus & {transform: translateY(0%) var(--animation-timing-function);
 		
+}
+
+@include mob {
+padding: 80px 24px;
+}
+@include tab {
+padding: 63px 24px;
+}
+
+@include desk {
+padding: 63px 24px;
 }
 }
 .portfolio-wrap__link {
@@ -72,25 +162,36 @@
 	transition: box-shadow var(--animation-timing-function);
     outline: 0;}
 	
+	@include tab { 
+	display: block;
+	flex-direction: column;	
+    flex-grow: 1;
+	}
 	}
 
 .porfolio-border {
+	
 	padding: 20px 24px;
 	border-bottom: var(--border-style);
 	border-left: var(--border-style);
 	border-right: var(--border-style);
+	
+	@include tab { 
+	display: flex;
+	flex-direction: column;	
+    flex-grow: 1;
+	}
+
 }
+
 .porfolio-border__title {
+	
+ @include font(700, 18px, 2, 0.06em);
 	margin-bottom: 4px;
-	font-weight: 700;
-	font-size: 18px;
-	line-height: 2;
-	letter-spacing: 0.06em;
+	
 }
-.porfolio-border__text {
-	font-size: 16px;
-	line-height: 1.88;
-	letter-spacing: 0.03em;
+.porfolio-border__text { 
+@include font(400, 16px, 1.88, 0.03em);
 	color: var(--main-text-color);
 }
 

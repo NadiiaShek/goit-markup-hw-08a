@@ -7,6 +7,7 @@
 	@extend %centeredFlex;
 	transition: opacity var(--animation-timing-function),
 		visibility var(--animation-timing-function);
+	overflow-y: scroll;
 }
 
 .backdrop.is-hidden .modal {
@@ -14,9 +15,7 @@
 }
 
 .modal {
-	width: 528px;
-	height: 581px;
-	padding: 40px;
+	
 	background: var(--body-background-color);
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
 		0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -26,17 +25,41 @@
 	left: 50%;
 	transition: transform var(--animation-timing-function);
 	transform: translate(-50%, -50%) scale(1) rotate(0);
+@include mob {
+	width: 450px;
+	height: 609px;
+	padding: 40px;
+}
+@include tab {
+	width: 450px;
+	height: 609px;
+	padding: 40px;
+}
+
+@include desk {
+	width: 528px;
+	height: 581px;
+	padding: 40px;
+	}
 }
 
 
 .modal-title {
 	margin-bottom: 12px;
-	font-weight: 700;
-	font-size: 20px;
-	line-height: 1.15;
 	text-align: center;
-	letter-spacing: 0.03em;
+	font-weight: 700;
+	
 	color: var(--body-text-color);
+
+	@include mob {
+		@include font(normal, 20px, 1.50, 0.03em);
+	}
+  @include tab {
+		@include font(normal, 20px, 1.15, 0.03em);
+	} 
+	@include desk {
+		@include font(normal, 20px, 1.15, 0.03em);
+	}
 }
 
 .modale-input {
@@ -91,18 +114,35 @@
 .text-checkbox {
 	@extend %centeredFlex;
 	flex-wrap: nowrap;
-	@include font(normal, 14px, 1.71, 0.03em);
-	color: var(--main-text-color);
 	
+	color: var(--main-text-color);
+	@include mob {
+		@include font(normal, 12px, 1.16, 0.03em);
+	}
+  @include tab {
+		@include font(normal, 12px, 1.16, 0.03em);
+	} 
+	@include desk {
+		@include font(normal, 14px, 1.71, 0.03em);
+	}
 }
 
 .policy-link {
 	@extend %centeredFlex;
 	margin-left: 4px;
-	@include font(normal, 14px, 1.71, 0.03em);
 	text-decoration-line: underline;
 	color: var(--current-color);
 	.text-checkbox:hover + &, 	.text-checkbox:focus + & {outline-color: var(--focus-hover-color);
 	border: 1px solid var(--focus-hover-color);}
+    @include mob {
+		@include font(normal, 12px, 1.16, 0.03em);
+	} 
+	  
+	@include tab {
+		@include font(normal, 12px, 1.16, 0.03em);
+	} 
+	@include desk {
+		@include font(normal, 14px, 1.71, 0.03em);
+	}
 }
 

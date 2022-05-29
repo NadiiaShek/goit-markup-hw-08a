@@ -1,9 +1,15 @@
 .contacts-group {
+	@include desk {
+	display: flex;
+	margin-left: auto;
+	}
+	
 }
+
 
 .navigation__link {
 	position: relative;
-	
+	@extend %centeredFlex;
 	padding-top: 32px;
 	padding-bottom: 32px;
 	transition: color var(--animation-timing-function);
@@ -14,46 +20,98 @@
 }
 
 .navigation__item:not(:last-child) {
-	margin-right: 50px;
+	@include desk {
+		margin-right: 50px;
+	}
 }
 
 .navigation__list {
-
 	@extend %list;
+
+@include desk {
+		display: flex;
+	margin-right: auto;
+	}
 }
 
 .navigation {
-
+	
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 1.14;
 	letter-spacing: 0.02em;
+
+@include mob {
+	display: none;
 }
+
+@include tab {
+    display: flex;
+	align-items: center;
+	}
+
+@include desk {
+    display: flex;
+	align-items: center;
+	}
+
+}
+
 header {
+	position: relative;
 	border-bottom: var(--border-style);
 }
 
 
 .contacts-group__list {
-
+	
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 1.14;
 	letter-spacing: 0.02em;
 	color: var(--contact-list-color);
 	@extend %list;
+
+@include mob {
+	display: none;
+}
+
+@include tab {
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: auto;
+	margin-right: 0;
+
+	}
+@include desk {
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: auto;
+	margin-right: 0;
+
+	}
 }
 
 .contacts-group__item:not(:last-child) {
-	
+	@include desk {
+	margin-right: 50px;
+	margin-left: auto;
+	}
 }
 
 .contacts-group__item {
-	
+	@include desk {
+		display: inline-flex;
 }
+	}
+
 
 .contacts-group__icon {
-	
+	@extend %centeredFlex;
 	margin-right: 10px;
 	fill: currentColor;
 }
+
+

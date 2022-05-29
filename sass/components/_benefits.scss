@@ -6,17 +6,17 @@ padding-bottom: 25px;
 padding-top: 25px;
 	margin-bottom: 30px;
 	background-color: var(--our-team-background-color);
-@media screen and (min-width: 480px) {
+@include mob {
     width: 450px;
 	height: 120px;
 
   }
-  	@media screen and (min-width: 768px) {
+ @include tab {
     width: 354px;
 	height: 120px;
 	
   }
-  @media screen and (min-width: 1200px) {
+  @include desk {
     width: 270px;
 	height: 120px;
 	
@@ -26,19 +26,19 @@ padding-top: 25px;
 	
 	
 .our-benefits {
-@media screen and (min-width: 480px) {
+	padding-top: 60px;
+	padding-bottom: 60px;
+@include mob {
 	padding-top: 60px;
 	padding-bottom: 60px;
 }
 
-
-
-@media screen and (min-width: 768px) {
+@include tab {
 	padding-top: 60px;
 	padding-bottom: 60px;
 	
 }
-	 @media screen and (min-width: 1200px) {
+@include desk {
     padding-top: 89px;
 	padding-bottom: 94px;}
 	
@@ -49,12 +49,12 @@ padding-top: 25px;
 
 .our-benefits__list {
 	@extend %list;
-@media screen and (min-width: 768px) {
+@include tab {
 		display: flex;	
 		flex-wrap: wrap;
 		}
 
-		@media screen and (min-width: 1200px) {
+@include desk {
 		display: flex;
 		flex-wrap: nowrap;
 			
@@ -65,7 +65,7 @@ padding-top: 25px;
 	justify-content: center;
 
 
-	@media screen and (min-width: 768px) {
+	@include tab {
 		flex-basis: calc((100% - 2 * 30px) / 2);
 	&:nth-child(odd) {
 		margin-right: 30px;
@@ -73,8 +73,7 @@ padding-top: 25px;
 	flex-wrap: wrap;
 	}
 
-
-	@media screen and (min-width: 1200px) {
+@include desk {
 	flex-basis: calc((100% - 3 * 30px) / 3);
 &:not(:last-child) {
 	margin-right: 30px;

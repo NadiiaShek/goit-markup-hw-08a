@@ -16,11 +16,18 @@
 <body class="body">
 <header class="header">
     <div class="contacts-group conteiner">
+        <div class="mob-version-wrap"> 
+        <a class="navigation__logo" href="./" lang="en">
+            <span class="part-logo" lang="en">Web</span>Studio
+        </a>
+        <button type="button" class="menu-open-btn">
+            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                <use class="icon-menu" href="./images/SVG/sprite.svg#menu-3-line"></use>
+            </svg>
+        </button>
+        </div>
             <nav class="navigation">
-                <a class="navigation__logo" href="./" lang="en">
-                    <span class="part-logo" lang="en">Web</span>Studio
-                </a>
-               
+
                     <ul class="navigation__list">
 
                         <li class="navigation__item">
@@ -57,6 +64,54 @@
                 </ul>
             
        
+    </div>
+
+    <div class="mob-menu">
+        <div class="conteiner"> 
+        <button type="button" class="menu-close-btn"> 
+          <svg width="40" height="40"  
+            aria-label="Переключатель мобильного меню">
+            <use class="icon-cross" href="./images/SVG/sprite.svg#menu-close-mod"></use>
+          </svg>
+        </button>
+
+        <ul class="mob-menu__list">
+        
+            <li class="mob-menu__item">
+                <a href="./index.html" class="mob-menu__link">Студия</a>
+            </li>
+            <li class="mob-menu__item">
+                <a href="./portfolio.html" class="mob-menu__link">Портфолио</a>
+            </li>
+            <li class="mob-menu__item">
+                <a href="" class="mob-menu__link">Контакты</a>
+            </li>
+        </ul>
+        <div class="mob-menu-contacts">
+            <ul class="mob-menu-contacts__list">
+                <li class="mob-menu-contacts__item"><a class="mob-menu-contacts__link" href="tel:+380961111111"> +38 096 111 11 11</a>
+                </li>
+                <li class="mob-menu-contacts__item link">
+                    <a class="mob-menu-contacts__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                </li>
+            </ul>
+        </div>
+        <div class="soc-wrap">
+            <ul class="soc-wrap__list">
+                <li class="soc-wrap__item">
+                    <a class="soc-wrap__link lang="en"
+                    href="">Instagram</a>
+                </li>
+                <li class="soc-wrap__item"><a class="soc-wrap__link lang="en" href="">Twitter</a>
+                </li>
+                <li class="soc-wrap__item"><a class="soc-wrap__link lang="en" href="">Facebook</a>
+                </li>
+                <li class="soc-wrap__item"><a class="soc-wrap__link lang="en" href="">LinkedIn</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
     </div>
 </header>
    
@@ -120,17 +175,38 @@
 
          <li class="main-directions__item">
             <div class="thumb">
-                <img src="./images/box1.jpeg" alt="разработка ПО" width="370" height="294"></div>
+                <picture> <source
+                    srcset="./images/box1.jpeg 1x, 
+                    ./images/box1-2x.jpeg 2x"
+                    media="(min-width:1200px)"
+                    /> 
+
+                <img src="./images/box1.jpeg" alt="разработка ПО">
+            </picture>
+        </div>
              <p class="main-directions__label">Десктопные приложения</p>
          </li>
 
     <li class="main-directions__item">
-        <div class="thumb"><img src="./images/box2.jpeg" alt="тестирование мобильного приложения" width="370" height="294">
+        <div class="thumb">
+        <picture>
+            <source srcset="./images/box2.jpeg 1x, 
+                            ./images/box2-2x.jpeg 2x" 
+                            media="(min-width:1200px)" />
+        
+            <img src="./images/box2.jpeg" alt="разработка ПО">
+        </picture>
         </div>
         <p class="main-directions__label">Мобильные приложения</p>
     </li>
     <li class="main-directions__item">
-        <div class="thumb"><img src="./images/box3.jpeg" alt="работа с политрой цвето3" width="370" height="294">
+        <div class="thumb">
+            <picture>
+                <source srcset="./images/box3.jpeg 1x, 
+                                        ./images/box3-2x.jpeg 2x" media="(min-width:1200px)" />
+            
+                <img src="./images/box3.jpeg" alt="разработка ПО" width="370" height="294">
+            </picture>
         </div>
         <p class="main-directions__label">Дизайнерские решения</p>
     </li>
@@ -143,11 +219,22 @@
     <h2 class="team__title">Наша команда</h2>
     <ul class="team__list">
         <li class="team__item">
-            <img src="./images/team-card-1.jpeg" 
-            alt="Игорь Демьяненко" 
-            width="270" 
-            height="260"
-            class="team__img">
+            <picture>
+                <source srcset="./images/team-card-1.jpeg 1x, 
+                ./images/team-card-1-2x.jpeg 2x" 
+                media="(min-width:1200px)"/>
+
+                <source srcset="./images/tablet/tab-card-1-1x.jpeg 1x, 
+                ./images/tablet/tab-card-1-2x.jpeg 2x" 
+                media="(min-width:798px)" />
+
+                <source srcset="./images/mobile/card-1-1x.jpeg 1x, 
+                ./images/mobile/card-1-2x.jpeg 2x" 
+                media="(min-width:480px)" />
+            
+            <img src="./images/team-card-1.jpeg" alt="Игорь Демьяненко" class="team__img">
+            </picture>
+            
             <h3 class="team__name">Игорь Демьяненко</h3>
             <p class="team__position"   lang="en">Product Designer</p>
             <ul class="team-soc-list">
@@ -182,11 +269,20 @@
             </ul>
         </li>
         <li class="team__item">
+            <picture>
+                <source srcset="./images/team-card-2.jpeg 1x, 
+                            ./images/team-card-2-2x.jpeg 2x" media="(min-width:1200px)" />
+            
+                <source srcset="./images/tablet/tab-card-2-1x.jpeg 1x, 
+                            ./images/tablet/tab-card-2-2x.jpeg 2x" media="(min-width:798px)" />
+            
+                <source srcset="./images/mobile/card-2-1x.jpeg 1x, 
+                            ./images/mobile/card-2-2x.jpeg 2x" media="(min-width:480px)" />
+
             <img src="./images/team-card-2.jpeg" 
             alt="Ольга Репина"  
-            width="270" 
-            height="260"
             class="team__img">
+            </picture>
             <h3 class="team__name">Ольга Репина</h3>
             <p class="team__position" lang="en">Frontend Developer</p>
             <ul class="team-soc-list">
@@ -221,11 +317,20 @@
             </ul>
         </li>
         <li class="team__item">
-            <img  lang="en" src="./images/team-card-3.jpeg" 
+            <picture>
+                <source srcset="./images/team-card-3.jpeg 1x, 
+                                        ./images/team-card-3-2x.jpeg 2x" media="(min-width:1200px)" />
+            
+                <source srcset="./images/tablet/tab-card-3-1x.jpeg 1x, 
+                                        ./images/tablet/tab-card-3-2x.jpeg 2x" media="(min-width:798px)" />
+            
+                <source srcset="./images/mobile/card-3-1x.jpeg 1x, 
+                                        ./images/mobile/card-3-2x.jpeg 2x" media="(min-width:480px)" />
+            <img  lang="en" src="./images/team-card-3.jpeg"
             alt="Николай Тарасов" 
-            width="270" 
-            height="260"
             class="team__img">
+            </picture>
+            
             <h3 class="team__name">Николай Тарасов</h3>
             <p class="team__position" lang="en">Marketing</p>
             <ul class="team-soc-list">
@@ -260,11 +365,19 @@
             </ul>
         </li>
         <li class="team__item">
+            <picture>
+                <source srcset="./images/team-card-4.jpeg 1x, 
+                                                    ./images/team-card-4-2x.jpeg 2x" media="(min-width:1200px)" />
+            
+                <source srcset="./images/tablet/tab-card-4-1x.jpeg 1x, 
+                                                    ./images/tablet/tab-card-4-2x.jpeg 2x" media="(min-width:798px)" />
+            
+                <source srcset="./images/mobile/card-4-1x.jpeg 1x, 
+                                                    ./images/mobile/card-4-2x.jpeg 2x" media="(min-width:480px)" />
             <img src="./images/team-card-4.jpeg" 
             alt="Михаил Ермаков" 
-            width="270" 
-            height="260"
             class="team__img">
+            </picture>
             <h3 class="team__name">Михаил Ермаков</h3>
             <p class="team__position" lang="en">UI Designer</p>
             <ul class="team-soc-list">
@@ -487,6 +600,7 @@
     </div>
 </div>
 <script src="./JS/modal.js"></script>
+<script src="./JS/menu.js"></script>
 </body>
 </html>  
  
