@@ -104,6 +104,7 @@
 	}
 	margin-bottom: 30px;
 	flex-wrap: wrap;
+	
 	}
 
 @include desk {
@@ -164,24 +165,20 @@ padding: 63px 24px;
 	
 	@include tab { 
 	display: block;
-	flex-direction: column;	
-    flex-grow: 1;
+	height: 100%;
+	
 	}
 	}
 
 .porfolio-border {
-	
+	flex-direction: column;	
+    flex-grow: 1;
 	padding: 20px 24px;
 	border-bottom: var(--border-style);
 	border-left: var(--border-style);
 	border-right: var(--border-style);
 	
-	@include tab { 
-	display: flex;
-	flex-direction: column;	
-    flex-grow: 1;
-	}
-
+	
 }
 
 .porfolio-border__title {

@@ -77,7 +77,7 @@ $desk: 1200px;
 }
 
 @mixin tab {
-	@media screen and (min-width: 786px) {
+	@media screen and (min-width: 768px) {
     @content;
   }
 }
