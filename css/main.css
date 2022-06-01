@@ -379,6 +379,7 @@ header {
 }
 @media screen and (min-width: 1200px) {
   .contacts-group__item:not(:last-child) {
+    margin-bottom: 0;
     margin-right: 50px;
     margin-left: auto;
   }

@@ -166,6 +166,7 @@ header {
 		margin-bottom: 10px;
 	}
 	@include desk {
+	margin-bottom: 0;
 	margin-right: 50px;
 	margin-left: auto;
 	}
