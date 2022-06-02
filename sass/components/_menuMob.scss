@@ -1,5 +1,7 @@
 .mob-version-wrap {
+	@media screen and (max-width: 767px) { 
 	display: flex;
+	}
 }
 
 .menu-open-btn {
@@ -11,7 +13,7 @@
 	&:hover, &:focus {
 	fill: var(--focus-hover-color);}
 
-	@include mob { 
+	@media screen and (max-width: 767px) {
 	margin-left: auto;
 	display: flex;
 	align-items: center;
@@ -26,6 +28,7 @@
 }
 }
 .mob-menu {
+	
 position: fixed; 
 	z-index: 1;
 	top: 0;
@@ -37,14 +40,11 @@ position: fixed;
 	overflow-y: auto;
 	
 }
-	
-	
 
 	
-
-
-
 .mob-menu .conteiner {
+	@media screen and (max-width: 767px) { 
+	display: none;
 	display: flex;
 	flex-direction: column;
 	justify-content: 
@@ -52,8 +52,10 @@ position: fixed;
 	align-items: flex-start;
 	height: 100%;
 	}
+}
 
 .menu-close-btn {
+	@media screen and (max-width: 767px) {
 	display: block;
 	margin-left: auto;
 	border: none;
@@ -62,6 +64,7 @@ position: fixed;
 	margin-right: 15px;
 	&:hover, &:focus {
 	fill: var(--focus-hover-color);
+}
 }
 }
 

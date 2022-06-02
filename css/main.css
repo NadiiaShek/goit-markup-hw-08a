@@ -287,6 +287,18 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+  .mail {
+    padding-top: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .phone {
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .navigation__item:not(:last-child) {
     margin-right: 50px;
   }
@@ -297,6 +309,11 @@ img {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .navigation__list {
+    display: none;
+  }
+}
 @media screen and (min-width: 768px) {
   .navigation__list {
     display: flex;
@@ -346,7 +363,7 @@ header {
   letter-spacing: 0.02em;
   color: var(--contact-list-color);
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .contacts-group__list {
     display: none;
   }
@@ -374,7 +391,7 @@ header {
 
 @media screen and (min-width: 768px) {
   .contacts-group__item:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -396,8 +413,10 @@ header {
   fill: currentColor;
 }
 
-.mob-version-wrap {
-  display: flex;
+@media screen and (max-width: 767px) {
+  .mob-version-wrap {
+    display: flex;
+  }
 }
 
 .menu-open-btn {
@@ -410,7 +429,7 @@ header {
 .menu-open-btn:hover, .menu-open-btn:focus {
   fill: var(--focus-hover-color);
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .menu-open-btn {
     margin-left: auto;
     display: flex;
@@ -441,24 +460,29 @@ header {
   overflow-y: auto;
 }
 
-.mob-menu .conteiner {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  height: 100%;
+@media screen and (max-width: 767px) {
+  .mob-menu .conteiner {
+    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+  }
 }
 
-.menu-close-btn {
-  display: block;
-  margin-left: auto;
-  border: none;
-  background-color: transparent;
-  margin-bottom: 8px;
-  margin-right: 15px;
-}
-.menu-close-btn:hover, .menu-close-btn:focus {
-  fill: var(--focus-hover-color);
+@media screen and (max-width: 767px) {
+  .menu-close-btn {
+    display: block;
+    margin-left: auto;
+    border: none;
+    background-color: transparent;
+    margin-bottom: 8px;
+    margin-right: 15px;
+  }
+  .menu-close-btn:hover, .menu-close-btn:focus {
+    fill: var(--focus-hover-color);
+  }
 }
 
 .mob-menu__item {
@@ -688,6 +712,7 @@ header {
   align-items: center;
   justify-content: center;
   background-color: var(--our-team-background-color);
+  width: 100%;
 }
 @media screen and (min-width: 480px) {
   .benifits-bg {
@@ -777,6 +802,11 @@ header {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+@media screen and (max-width: 480px) {
+  .our-benefits__title {
+    text-align: center;
+  }
 }
 
 .our-benefits__text {
@@ -1040,6 +1070,16 @@ header {
     margin-bottom: 15px;
   }
 }
+@media screen and (min-width: 768px) {
+  .btn-portfolio__item {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .btn-portfolio__item {
+    margin-bottom: 0;
+  }
+}
 
 @media screen and (min-width: 480px) {
   .portfolio-wrap__list {
@@ -1065,18 +1105,13 @@ header {
 
 .portfolio-wrap__item {
   margin-bottom: 30px;
-  display: block;
+  display: flex;
   overflow: hidden;
 }
 .portfolio-wrap__item:hover, .portfolio-wrap__item:focus-within {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   transition: box-shadow var(--animation-timing-function);
   outline: 0;
-}
-@media screen and (min-width: 480px) {
-  .portfolio-wrap__item {
-    display: block;
-  }
 }
 @media screen and (min-width: 768px) {
   .portfolio-wrap__item {
@@ -1156,6 +1191,7 @@ header {
 }
 
 .porfolio-border {
+  display: flex;
   flex-direction: column;
   flex-grow: 1;
   padding: 20px 24px;
@@ -1483,6 +1519,14 @@ header {
   }
 }
 
+@media screen and (min-width: 786px) {
+  .tablet-wrap {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+  }
+}
+
 .footer-contacts {
   margin: auto;
   text-align: center;
@@ -1498,8 +1542,8 @@ header {
 @media screen and (min-width: 768px) {
   .footer-contacts {
     margin-bottom: 60;
-    margin-left: 76px;
     text-align: center;
+    margin-right: 165px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1538,11 +1582,9 @@ header {
   .social-footer {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
     align-items: baseline;
     justify-content: space-between;
     height: 80px;
-    margin-right: 89px;
   }
 }
 @media screen and (min-width: 1200px) {

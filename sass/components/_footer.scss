@@ -97,7 +97,14 @@ display: flex;
 	}
 }
 
+.tablet-wrap {
+	@media screen and (min-width:786px) {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: nowrap;	
 
+	}
+}
 
 .footer-contacts {
 margin: auto;
@@ -112,8 +119,8 @@ margin: auto;
 
 @include tab {
 	margin-bottom: 60;
-	margin-left: 76px;
 	text-align: center;
+	margin-right: 165px;
 	
 
 }
@@ -151,11 +158,10 @@ margin: auto;
 @include tab {
 	display: flex;
 	flex-wrap: wrap;
-	flex-direction: row;
 	align-items: baseline;
 	justify-content: space-between;
 	height: 80px;
-	margin-right: 89px;
+	
 }
 @include desk { 
 	display: flex;

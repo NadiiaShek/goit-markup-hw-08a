@@ -3,6 +3,8 @@
 align-items: center;
 justify-content: center;
 	background-color: var(--our-team-background-color);
+	width: 100%;
+	
 @include mob {
     width: 450px;
 	height: 120px;
@@ -86,11 +88,19 @@ margin-bottom: 30px;
 	@include font(700, 14px, 1.14, 0.03em);
 	text-transform: uppercase;
 
-}
+	@media screen and (max-width: 480px)
+	{text-align: center;
+
+	}
+		
+	}
+
+
 
 .our-benefits__text {
 	width: 100%;
 	@include font(normal, 14px, 1.71, 0.03em);
 	color: var(--main-text-color);
+	}
 
-}
+
