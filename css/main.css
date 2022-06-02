@@ -687,9 +687,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 25px;
-  padding-top: 25px;
-  margin-bottom: 30px;
   background-color: var(--our-team-background-color);
 }
 @media screen and (min-width: 480px) {
@@ -734,6 +731,9 @@ header {
   }
 }
 
+.our-benefits__list {
+  margin-right: -30px;
+}
 @media screen and (min-width: 768px) {
   .our-benefits__list {
     display: flex;
@@ -749,6 +749,7 @@ header {
 
 .our-benefits__item {
   justify-content: center;
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
   .our-benefits__item {
@@ -769,6 +770,7 @@ header {
 }
 
 .our-benefits__title {
+  padding-top: 30px;
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
@@ -779,7 +781,6 @@ header {
 
 .our-benefits__text {
   width: 100%;
-  margin-bottom: 30px;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
@@ -790,7 +791,6 @@ header {
 .main-directions__item {
   position: relative;
   margin-bottom: 30px;
-  flex-basis: calc((100% - 60px) / 3);
 }
 
 .main-directions__item:not(:last-child) {
@@ -799,6 +799,7 @@ header {
 
 .main-directions__list {
   display: flex;
+  margin-right: -30px;
 }
 
 .main-directions {
@@ -822,7 +823,7 @@ header {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 370px;
+  width: 100%;
   height: 70px;
   text-align: center;
   text-transform: uppercase;
@@ -835,7 +836,6 @@ header {
 }
 
 .team__title {
-  padding-top: 60px;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -845,8 +845,6 @@ header {
     font-size: 28px;
     line-height: 1.17;
     letter-spacing: 0.03em;
-    padding-top: 60px;
-    margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -855,8 +853,6 @@ header {
     font-size: 28px;
     line-height: 1.17;
     letter-spacing: 0.03em;
-    padding-top: 60px;
-    margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -865,14 +861,30 @@ header {
     font-size: 36px;
     line-height: 1.16;
     letter-spacing: 0.03em;
-    padding-top: 94px;
-    margin-bottom: 50px;
   }
 }
 
 .team {
   padding-bottom: 60px;
   background-color: var(--our-team-background-color);
+}
+@media screen and (max-width: 480px), (min-width: 480px) {
+  .team {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .team {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1367,6 +1379,8 @@ header {
   padding-bottom: 60px;
   margin-right: 0px;
   margin-left: 0px;
+  display: flex;
+  align-items: baseline;
   background-color: var(--second-background);
 }
 
@@ -1392,6 +1406,10 @@ header {
 @media screen and (min-width: 1200px) {
   .address {
     display: flex;
+    align-items: baseline;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
 
@@ -1487,9 +1505,13 @@ header {
 @media screen and (min-width: 1200px) {
   .footer-contacts {
     width: 231px;
-    display: block;
-    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-right: 70px;
+    align-items: baseline;
     text-align: start;
+    margin-bottom: 0;
   }
 }
 
@@ -1516,6 +1538,7 @@ header {
   .social-footer {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     align-items: baseline;
     justify-content: space-between;
     height: 80px;
@@ -1526,10 +1549,12 @@ header {
   .social-footer {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     align-items: baseline;
     width: 206px;
     height: 80px;
-    margin-left: 70px;
+    margin-right: 93px;
+    margin-bottom: 0;
   }
   .social-footer__item + .social-footer__item {
     margin-left: 10px;

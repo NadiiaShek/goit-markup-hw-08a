@@ -1,7 +1,28 @@
 .team {
 padding-bottom: 60px;
 	background-color: var(--our-team-background-color);
+	@media screen and (max-width: 480px), (min-width: 480px) {
+	 padding-top: 60px;
+	 padding-bottom: 30px;
+  }
+@include tab {
+	 padding-top: 60px;
+	padding-bottom: 30px;
+  }
+@include desk {
+	 padding-top: 94px;
+	padding-bottom: 94px;
+  }
 }
+
+
+
+
+
+
+
+
+
 
 
 

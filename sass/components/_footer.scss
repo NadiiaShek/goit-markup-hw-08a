@@ -3,7 +3,8 @@
 	padding-bottom: 60px;
 	margin-right: 0px;
 	margin-left: 0px;
-
+	display: flex;
+    align-items: baseline;
 	background-color: var(--second-background);
 
 }
@@ -26,6 +27,10 @@ display: flex;
 	}
 	@include desk { 
 	display: flex;
+	align-items: baseline;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
 	
 	
 	}
@@ -114,10 +119,13 @@ margin: auto;
 }
  @include desk {
 	 width: 231px;
-	 display: block;
-	 margin: auto;
+	 display: flex;
+	 flex-wrap: wrap;
+	 margin-left: 0;
+	 margin-right: 70px;
+	 align-items: baseline;
 	 text-align: start;
-	
+	margin-bottom: 0;
  }
 
 
@@ -143,6 +151,7 @@ margin: auto;
 @include tab {
 	display: flex;
 	flex-wrap: wrap;
+	flex-direction: row;
 	align-items: baseline;
 	justify-content: space-between;
 	height: 80px;
@@ -151,10 +160,12 @@ margin: auto;
 @include desk { 
 	display: flex;
 	flex-wrap: wrap;
+	flex-direction: row;
 	align-items: baseline;
 	width: 206px;
 	height: 80px;
-	margin-left: 70px;
+	margin-right: 93px;
+	margin-bottom: 0;
 	&__item + &__item {
 	margin-left: 10px;};
 }
