@@ -110,7 +110,7 @@
 	}
 	margin-bottom: 30px;
 	flex-wrap: wrap;
-	
+
 	}
 
 @include desk {
@@ -169,11 +169,6 @@ padding: 63px 24px;
 	transition: box-shadow var(--animation-timing-function);
     outline: 0;}
 	
-	@include tab { 
-	display: block;
-	height: 100%;
-	
-	}
 	}
 
 .porfolio-border {
