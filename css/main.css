@@ -30,7 +30,7 @@
   cursor: pointer;
 }
 
-.icon-checkbox, .custom-checkbox, .btn-send-modale, .close-modal, .close-btn, .policy-link, .text-checkbox, .modal-policy, .backdrop, .social-footer__link, .main-directions__label, .hero .button, .contacts-group__icon {
+.icon-checkbox, .custom-checkbox, .btn-send-modale, .close-modal, .close-btn, .policy-link, .modal-policy, .backdrop, .social-footer__link, .main-directions__label, .hero .button, .contacts-group__icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1006,6 +1006,10 @@ header {
   transition: background-color var(--animation-timing-function);
 }
 
+.responsive-img {
+  width: 100%;
+}
+
 .filtr-portfolio {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -1955,7 +1959,6 @@ header {
 }
 
 .text-checkbox {
-  flex-wrap: nowrap;
   color: var(--main-text-color);
 }
 @media screen and (min-width: 480px) {
@@ -1972,6 +1975,7 @@ header {
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.03em;
+    flex-wrap: nowrap;
   }
 }
 @media screen and (min-width: 1200px) {

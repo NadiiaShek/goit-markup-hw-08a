@@ -120,18 +120,21 @@
 
 
 .text-checkbox {
-	@extend %centeredFlex;
-	flex-wrap: nowrap;
+	
+
 	
 	color: var(--main-text-color);
 	@include mob {
 		@include font(normal, 12px, 1.16, 0.03em);
+		
 	}
   @include tab {
 		@include font(normal, 12px, 1.16, 0.03em);
+		flex-wrap: nowrap;
 	} 
 	@include desk {
 		@include font(normal, 14px, 1.71, 0.03em);
+			
 	}
 }
 
