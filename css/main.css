@@ -1006,10 +1006,6 @@ header {
   transition: background-color var(--animation-timing-function);
 }
 
-.responsive-img {
-  width: 100%;
-}
-
 .filtr-portfolio {
   padding-top: 60px;
   padding-bottom: 60px;
